@@ -2,4 +2,5 @@
 
 ### Node
 
-'''"""""
+```
+node -v #verifica versão 

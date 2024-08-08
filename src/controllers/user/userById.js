@@ -1,5 +1,5 @@
 const userById = (req, res) => {
-    res.json({message: "Rota POST /user"})
+    res.json({message: "Rota GET /user"})
 }
 
 export default userById

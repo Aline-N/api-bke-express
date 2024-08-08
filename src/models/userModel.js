@@ -7,8 +7,8 @@ const getAll = () => {
         },
         {
             id: 2,
-            name: "Aline",
-            email: "aline@gmail.com"
+            name: "Maria",
+            email: "maria@gmail.com"
         }
     ]
 }

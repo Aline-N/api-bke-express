@@ -14,4 +14,3 @@ model user {
   email String @unique(map: "email_UNIQUE") @db.VarChar(200)
   pass  String @db.VarChar(256)
 }
-

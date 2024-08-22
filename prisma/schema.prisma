@@ -3,7 +3,8 @@ generator client {
 }
 
 datasource db {
-  provider = "mysql"
+  //provider = "mysql"
+  provider = "postgresql"
   url      = env("DATABASE_URL")
 }
 
@@ -13,3 +14,4 @@ model user {
   email String @unique(map: "email_UNIQUE") @db.VarChar(200)
   pass  String @db.VarChar(256)
 }
+

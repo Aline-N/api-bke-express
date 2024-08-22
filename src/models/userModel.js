@@ -18,7 +18,7 @@ export const getById = async (id) => {
         where: {
             id
         },
-        selected: {
+        select: {
             id: true,
             name: true,
             email: true

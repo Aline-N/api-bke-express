@@ -1,6 +1,36 @@
 import { PrismaClient } from '@prisma/client'
+import { z } from 'zod'
 
 const prisma = new PrismaClient()
+
+const userSchema = z.object({
+    id: z.number({message: "O ID deve ser um número inteiro."})
+        .positive({message: "O ID deve ser um número positivo."}),
+    name: z.string({message: "O nome deve ser uma string."})
+        .min(3, {message: "O nome deve ter no mínimo 3 caracteres."})
+        .max(100, {message: "O nome deve ter no máximo 100 caracteres."}),
+    email: z.string({message: "O email deve ser uma string."})
+        .email({message: "Email inválido."})
+        .max(200, {message: "O email deve ter no máximo 200 caracteres."}),
+    pass: z.string(
+        required_error: "A senha é obrigatória.",
+        invalid_type_error: "A senha deve ser uma "
+    )
+        .min(6)
+        .max(256)
+})  
+
+export const validateUser = (user) => {
+    return userSchema.safeParse(user)
+}
+
+export const validateUserToCreate = (user) => {
+    const partialUserSchema = userSchema.partial({
+        id: true
+    })
+    return partialUserSchema.safeParse(user)
+}
+
 
 export const getAll = async () => {
     const users = await prisma.user.findMany({

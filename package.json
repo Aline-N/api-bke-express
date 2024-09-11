@@ -1,19 +1,22 @@
 {
-  "name": "api-bke-express",
+  "name": "api-bke-express-ads-2sem2024",
   "version": "1.0.0",
   "description": "API Node com framework Express",
   "main": "src/server.js",
   "type": "module",
   "scripts": {
     "start": "node src/server.js",
-    "dev": "node  --env-file=.env --watch src/server.js",
-    "prisma:pull": "npx prisma db pull",
-    "prisma:push": "npx prisma db push",
-    "prisma:generate": "npx prisma generate"
+    "dev": "node --env-file=.env --watch src/server.js",
+    "prisma:local:pull": "npx prisma db pull --schema=./prisma/schema.local.prisma",
+    "prisma:local:push": "npx prisma db push --schema=./prisma/schema.local.prisma",
+    "prisma:local:generate": "npx prisma generate --schema=./prisma/schema.local.prisma",
+    "prisma:pull": "npx prisma db pull --schema=./prisma/schema.production.prisma",
+    "prisma:push": "npx prisma db push --schema=./prisma/schema.production.prisma",
+    "prisma:generate": "npx prisma generate --schema=./prisma/schema.production.prisma"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/aline11111/api-bke-express.git"
+    "url": "git+https://github.com/renancavichi/api-bke-express-ads-2sem2024.git"
   },
   "keywords": [
     "api",
@@ -21,12 +24,12 @@
     "express",
     "zod"
   ],
-  "author": "Aline Nunes",
+  "author": "Renan Cavichi",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/aline11111/api-bke-express/issues"
+    "url": "https://github.com/renancavichi/api-bke-express-ads-2sem2024/issues"
   },
-  "homepage": "https://github.com/aline11111/api-bke-express#readme",
+  "homepage": "https://github.com/renancavichi/api-bke-express-ads-2sem2024#readme",
   "dependencies": {
     "@prisma/client": "^5.18.0",
     "express": "^4.19.2",

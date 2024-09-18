@@ -16,7 +16,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/renancavichi/api-bke-express-ads-2sem2024.git"
+    "url": "git+https://github.com/aline11111/api-bke-express.git"
   },
   "keywords": [
     "api",
@@ -24,12 +24,12 @@
     "express",
     "zod"
   ],
-  "author": "Renan Cavichi",
+  "author": "Aline Nunes",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/renancavichi/api-bke-express-ads-2sem2024/issues"
+    "url": "https://github.com/aline11111/api-bke-express/issues"
   },
-  "homepage": "https://github.com/renancavichi/api-bke-express-ads-2sem2024#readme",
+  "homepage": "https://github.com/aline11111/api-bke-express#readme",
   "dependencies": {
     "@prisma/client": "^5.18.0",
     "express": "^4.19.2",
